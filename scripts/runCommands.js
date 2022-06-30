@@ -17,7 +17,7 @@ const run = async (command)=>{
 
 }
 
-exports.runCommands = async (commands)=>{
+const runCommands = async (commands)=>{
   for(command of commands){
     try{
       await run(command)
@@ -26,3 +26,5 @@ exports.runCommands = async (commands)=>{
     }
   }
 }
+
+module.exports = { run,runCommands }
